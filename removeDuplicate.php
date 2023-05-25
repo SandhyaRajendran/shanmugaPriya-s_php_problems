@@ -82,7 +82,31 @@ function uniq($arrrVal){
         }
     }
 
-    echo "output";
-    print_r($output);
+    // echo "output";
+    // print_r($output);
 }
 uniq([1,23,45,7,78,9,3,45,2,3]);
+
+
+$a = array(1,2,3,1,3,4,5);
+$count = count($a);
+$b = [];
+for($i=0; $i<$count; $i++){
+    if(!in_array($a[$i], $b)){
+        array_push($b, $a[$i]);
+    }
+}
+// print_r ($b);
+
+$val = array(1,1,2,3,4,9,4,1,3,1);
+$opVal = [];
+for ($k=0; $k < count($val); $k++) { 
+    # code...
+    print_r($val[$k]);                                              
+
+    if(!in_array($val[$k],$opVal)){
+        array_push($opVal,$val[$k]);
+    }
+}
+echo "current output";
+print_r($opVal);
